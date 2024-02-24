@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.mainMenuController">
+   <children>
+      <Label layoutX="14.0" layoutY="34.0" text="Appointments">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="mainMenuTV" layoutY="78.0" prefHeight="272.0" prefWidth="969.0">
+        <columns>
+          <TableColumn fx:id="apptIdCOL" prefWidth="75.0" text="Appt ID" />
+          <TableColumn fx:id="titleCOL" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="descriptionCOL" prefWidth="96.0" text="Description" />
+            <TableColumn fx:id="locationCOL" prefWidth="96.0" text="Location" />
+            <TableColumn fx:id="contactCOL" prefWidth="104.0" text="Contact" />
+            <TableColumn fx:id="typeCOL" prefWidth="119.0" text="Type" />
+            <TableColumn fx:id="startTimeCOL" prefWidth="125.0" text="Start Date/Time" />
+            <TableColumn fx:id="endTimeCOL" prefWidth="109.0" text="End Date/Time" />
+            <TableColumn fx:id="customerIdCOL" prefWidth="86.0" text="Customer ID" />
+            <TableColumn fx:id="userIdCOL" prefWidth="83.0" text="User ID" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="weekRBT" layoutX="399.0" layoutY="37.0" mnemonicParsing="false" onAction="#onActionCurrentWeek" text="View by Week">
+         <toggleGroup>
+            <ToggleGroup fx:id="mmRDBT" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="monthRBT" layoutX="536.0" layoutY="37.0" mnemonicParsing="false" onAction="#onActionCurrentMonth" text="View by Month" toggleGroup="$mmRDBT" />
+      <RadioButton fx:id="viewAllRBT" layoutX="675.0" layoutY="37.0" mnemonicParsing="false" onAction="#onActionViewAll" selected="true" text="View All" toggleGroup="$mmRDBT" />
+      <Button fx:id="reportsBTN" layoutX="813.0" layoutY="509.0" mnemonicParsing="false" onAction="#onActionReports" prefHeight="26.0" prefWidth="100.0" text="Reports" />
+      <Button fx:id="addAppointmentBTN" layoutX="40.0" layoutY="367.0" mnemonicParsing="false" onAction="#onActionAddAppointment" text="Add Appointment" />
+      <Button fx:id="modifyAppointmentBTN" layoutX="181.0" layoutY="367.0" mnemonicParsing="false" onAction="#onActionModAppt" text="Modify Appointment" />
+      <Button fx:id="deleteAppointmentCOL" layoutX="336.0" layoutY="367.0" mnemonicParsing="false" onAction="#onActionDeleteAppt" text="Cancel Appointment" />
+      <Button fx:id="logoutBTN" layoutX="813.0" layoutY="569.0" mnemonicParsing="false" onAction="#onActionLogout" prefWidth="100.0" text="Logout" />
+      <Label layoutX="14.0" layoutY="6.0" text="Time Zone:" textFill="#00000099" />
+      <Label fx:id="TZchangeMeTXT" layoutX="81.0" layoutY="6.0" prefHeight="17.0" prefWidth="138.0" text="TZchangeMe" textFill="#00000099" />
+      <Label layoutX="14.0" layoutY="412.0" text="Customers">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customersTV" layoutY="450.0" prefHeight="224.0" prefWidth="750.0">
+        <columns>
+          <TableColumn fx:id="customerCUSIdCOL" prefWidth="85.0" text="Customer ID" />
+          <TableColumn fx:id="nameCOL" prefWidth="136.0" text="Name" />
+            <TableColumn fx:id="phoneCOL" minWidth="9.0" prefWidth="142.0" text="Phone Number" />
+            <TableColumn fx:id="addressCOL" prefWidth="169.0" text="Address" />
+            <TableColumn fx:id="stateCOL" prefWidth="115.0" text="State/Province" />
+            <TableColumn fx:id="postalCodeCOL" prefWidth="104.0" text="Postal Code" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteCustomerBTN" layoutX="336.0" layoutY="687.0" mnemonicParsing="false" onAction="#onActionDeleteCust" text="Delete Customer" />
+      <Button fx:id="modCustomerBTN" layoutX="181.0" layoutY="687.0" mnemonicParsing="false" onAction="#onActionModCust" text="Modify Customer" />
+      <Button fx:id="addCustomerBTN" layoutX="40.0" layoutY="687.0" mnemonicParsing="false" onAction="#onActionAddCust" text="Add Customer" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.reportsController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Reports">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="contactTV" layoutX="14.0" layoutY="69.0" prefHeight="129.0" prefWidth="724.0">
+        <columns>
+          <TableColumn fx:id="idCOL" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="titleCOL" prefWidth="70.0" text="Title" />
+            <TableColumn fx:id="typeCOL" prefWidth="72.0" text="Type" />
+            <TableColumn fx:id="descriptionCOL" prefWidth="118.0" text="Description" />
+            <TableColumn fx:id="locationCOL" prefWidth="76.0" text="Location" />
+            <TableColumn fx:id="startCOL" prefWidth="133.0" text="Start Date/Time" />
+            <TableColumn fx:id="endCOL" prefWidth="138.0" text="End Date/Time" />
+            <TableColumn fx:id="customerIDCOL" prefWidth="76.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <TableView fx:id="apptTV" layoutX="14.0" layoutY="216.0" prefHeight="200.0" prefWidth="366.0">
+        <columns>
+          <TableColumn fx:id="apptMonthCOL" prefWidth="136.0" text="Appointment Month" />
+          <TableColumn fx:id="apptTypeCOL" prefWidth="141.0" text="Appointment Type" />
+            <TableColumn fx:id="apptTotalCOL" prefWidth="88.0" text="Total" />
+        </columns>
+      </TableView>
+      <TableView fx:id="customerTV" layoutX="457.0" layoutY="216.0" prefHeight="200.0" prefWidth="274.0">
+        <columns>
+          <TableColumn fx:id="customerCOL" prefWidth="117.0" text="Customer" />
+          <TableColumn fx:id="numberOfApptCOL" prefWidth="156.0" text="Number of Appointments" />
+        </columns>
+      </TableView>
+      <Label layoutX="493.0" layoutY="41.0" text="Contact: " />
+      <Button fx:id="backBTN" layoutX="504.0" layoutY="439.0" mnemonicParsing="false" onAction="#onActionBackToMain" prefHeight="25.0" prefWidth="70.0" text="Back" />
+      <Button fx:id="logoutBTN" layoutX="594.0" layoutY="439.0" mnemonicParsing="false" onAction="#onActionLogout" prefWidth="70.0" text="Logout" />
+      <ComboBox fx:id="contactCB" layoutX="554.0" layoutY="37.0" onAction="#onActionSelectContact" prefWidth="150.0" />
+   </children>
+</AnchorPane>

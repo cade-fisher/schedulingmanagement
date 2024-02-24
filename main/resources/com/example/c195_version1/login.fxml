@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.loginController">
+    <children>
+        <GridPane layoutX="148.0" layoutY="121.0" prefHeight="250.0" prefWidth="300.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="49.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="49.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label fx:id="userNameTXT" text="Username">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="passwordTXT" prefHeight="23.0" prefWidth="109.0" text="Password" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Button fx:id="loginBTN" mnemonicParsing="false" onAction="#loginBTN" prefHeight="27.0" prefWidth="100.0" text="Login" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="resetBTN" mnemonicParsing="false" onAction="#resetBTN" prefHeight="27.0" prefWidth="100.0" text="Reset" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="userNameTXTField" GridPane.columnIndex="1">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="passwordTXTField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <Label fx:id="languageTXT" prefHeight="23.0" prefWidth="109.0" text="Language" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="languageCB" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <Label fx:id="loginTXT" alignment="CENTER" layoutX="145.0" layoutY="71.0" prefHeight="35.0" prefWidth="300.0" text="Login">
+            <font>
+                <Font name="Apple Braille" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="TimeZoneTXT" layoutX="22.0" layoutY="14.0" text="Time Zone:" />
+        <Label fx:id="timeZoneChangeTXT" layoutX="81.0" layoutY="14.0" text="changeMeTimeZone">
+         <padding>
+            <Insets left="35.0" />
+         </padding></Label>
+    </children>
+</AnchorPane>
